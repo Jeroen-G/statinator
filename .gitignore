@@ -1,0 +1,8 @@
+/node_modules
+/report
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log

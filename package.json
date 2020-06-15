@@ -1,0 +1,18 @@
+{
+    "author": "https://enrise.com/",
+    "private": true,
+    "husky": {
+        "hooks": {
+            "pre-commit": "make pre-commit"
+        }
+    },
+    "lint-staged": {
+        "*.php": [
+            "php vendor/bin/ecs check --fix --config=easy-coding-standard.yml"
+        ]
+    },
+    "devDependencies": {
+        "husky": "^3.0.8",
+        "lint-staged": "^9.4.1"
+    }
+},

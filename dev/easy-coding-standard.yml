@@ -1,0 +1,18 @@
+services:
+  PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: ~
+  PhpCsFixer\Fixer\Strict\StrictComparisonFixer: ~
+  PhpCsFixer\Fixer\Strict\StrictParamFixer: ~
+  PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer: ~
+  SlevomatCodingStandard\Sniffs\ControlStructures\AssignmentInConditionSniff: ~
+  PhpCsFixer\Fixer\Alias\MbStrFunctionsFixer: ~
+  PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer: ~
+
+parameters:
+  sets:
+    - 'clean-code'
+    - 'psr12'
+
+  exclude_files:
+    - 'node_modules/*'
+    - 'vendor/*'
+    - 'bootstrap/*'
