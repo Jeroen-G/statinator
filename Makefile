@@ -17,6 +17,7 @@ update: intro do-composer-update
 # Tests
 tests: intro do-test-unit do-test-report
 test-unit: intro do-test-unit
+mutations: intro do-test-infection
 
 # Development
 pre-commit: intro do-lint-staged-files do-commit-intro
@@ -36,6 +37,7 @@ help:
 	@echo "\nTests"
 	@echo "    make tests                     Run tests."
 	@echo "    make test-unit                 Run unit tests."
+	@echo "    make mutations                 Run the infection mutation tests."
 	@echo "\nDevelopment"
 	@echo "    make codestyle                 Check if the codestyle is OK."
 	@echo "    make codestyle-fix             Check and fix your messy codestyle."
@@ -75,6 +77,10 @@ do-assets-install:
 do-test-unit:
 	@echo "\n=== Running unit tests ===\n"
 	vendor/bin/phpunit
+
+do-test-infection:
+	@echo "\n=== Running unit tests ===\n"
+	vendor/bin/infection --threads=4 --min-covered-msi=100
 
 do-test-report:
 	@echo "\n=== Click the link below to see the test coverage report ===\n"
