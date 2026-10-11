@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace JeroenG\Statinator;
 
-use Throwable;
-
 interface ActionableInterface
 {
     public function execute(StateMachineInterface $stateMachine, string $transition): void;
@@ -13,9 +11,4 @@ interface ActionableInterface
     public function getState(): string;
 
     public function getTransition(): string;
-
-    /**
-     * Get the exception that was thrown during execution, if any.
-     */
-    public function getException(): ?Throwable;
 }

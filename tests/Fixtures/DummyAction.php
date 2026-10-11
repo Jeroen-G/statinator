@@ -6,7 +6,6 @@ namespace JeroenG\Statinator\Tests\Fixtures;
 
 use JeroenG\Statinator\ActionableInterface;
 use JeroenG\Statinator\StateMachineInterface;
-use Throwable;
 
 final class DummyAction implements ActionableInterface
 {
@@ -30,10 +29,5 @@ final class DummyAction implements ActionableInterface
     public function getTransition(): string
     {
         return $this->transition;
-    }
-
-    public function getException(): ?Throwable
-    {
-        return null;
     }
 }
