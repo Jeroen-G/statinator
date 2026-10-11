@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace JeroenG\Statinator\Exception;
 
 use Exception;
+use Throwable;
 
 final class TransitionActionFailedException extends Exception
 {

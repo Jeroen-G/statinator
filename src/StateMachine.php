@@ -75,7 +75,7 @@ final class StateMachine implements StateMachineInterface
         }
     }
 
-    private function executeAction(ActionableInterface|callable $action, string $transition): void
+    private function executeAction(ActionableInterface|callable|string $action, string $transition): void
     {
         try {
             if (is_callable($action)) {
@@ -84,7 +84,7 @@ final class StateMachine implements StateMachineInterface
                 return;
             }
 
-            if (class_exists($action)) {
+            if (is_string($action) && class_exists($action)) {
                 $action = new $action();
             }
 
