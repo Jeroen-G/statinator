@@ -124,6 +124,7 @@ class StateMachineTest extends TestCase
         $this->assertFalse($dummy->triggered);
         $this->assertSame('INITIAL_STATE', $sm->getState());
     }
+
     private function getConfig(): array
     {
         return [
