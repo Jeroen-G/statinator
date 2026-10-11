@@ -1,12 +1,3 @@
-services:
-  PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: null
-  PhpCsFixer\Fixer\Strict\StrictComparisonFixer: null
-  PhpCsFixer\Fixer\Strict\StrictParamFixer: null
-  PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer: null
-  SlevomatCodingStandard\Sniffs\ControlStructures\AssignmentInConditionSniff: null
-  PhpCsFixer\Fixer\Alias\MbStrFunctionsFixer: null
-  PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer: null
-
 parameters:
   sets:
     - 'clean-code'
