@@ -9,11 +9,14 @@ use JeroenG\Statinator\Repository\ArrayActionRepository;
 
 final class Statinator
 {
-    public function __construct(
-        private array $config = [],
-        private ?ActionRepositoryInterface $actionRepository = null
-    ) {
-        $this->actionRepository = $actionRepository ?? new ArrayActionRepository();
+    private array $config;
+
+    private ActionRepositoryInterface $actionRepository;
+
+    public function __construct(array $config = [], ?ActionRepositoryInterface $repository = null)
+    {
+        $this->config = $config;
+        $this->actionRepository = $repository ?? new ArrayActionRepository();
     }
 
     public function getStates(): array
