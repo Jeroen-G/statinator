@@ -6,6 +6,7 @@ namespace JeroenG\Statinator\Tests\Fixtures;
 
 use JeroenG\Statinator\ActionableInterface;
 use JeroenG\Statinator\StateMachineInterface;
+use Throwable;
 
 final class DummyAction implements ActionableInterface
 {
