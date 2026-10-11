@@ -1,6 +1,5 @@
 parameters:
   sets:
-    - 'clean-code'
     - 'psr12'
 
   exclude_files:
