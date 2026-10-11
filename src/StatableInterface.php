@@ -7,5 +7,6 @@ namespace JeroenG\Statinator;
 interface StatableInterface
 {
     public function getState(): string;
+
     public function setState(string $to): void;
 }

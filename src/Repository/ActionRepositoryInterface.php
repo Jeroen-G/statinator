@@ -10,5 +10,6 @@ use Throwable;
 interface ActionRepositoryInterface
 {
     public function add(ActionableInterface $actionable, ?Throwable $throwable = null): void;
+
     public function all(): iterable;
 }
