@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace JeroenG\Statinator;
 
+use Throwable;
+
 interface ActionableInterface
 {
     public function execute(StateMachineInterface $stateMachine, string $transition): void;
