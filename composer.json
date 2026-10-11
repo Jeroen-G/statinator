@@ -17,6 +17,12 @@
         "symplify/easy-coding-standard": "^12.0",
         "infection/infection": "^0.27"
     },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
     "autoload": {
         "psr-4": {
             "JeroenG\\Statinator\\": "src/"
