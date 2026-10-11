@@ -9,7 +9,7 @@ use Throwable;
 
 final class ArrayActionRepository implements ActionRepositoryInterface
 {
-    private array $ledger = [];
+    private readonly array $ledger = [];
 
     public function add(ActionableInterface $actionable, ?Throwable $throwable = null): void
     {

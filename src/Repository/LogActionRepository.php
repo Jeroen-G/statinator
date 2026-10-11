@@ -10,12 +10,10 @@ use Throwable;
 
 final class LogActionRepository implements ActionRepositoryInterface
 {
-    private array $ledger = [];
-    private LoggerInterface $logger;
-
-    public function __construct(LoggerInterface $logger)
-    {
-        $this->logger = $logger;
+    public function __construct(
+        private LoggerInterface $logger,
+        private readonly array $ledger = []
+    ) {
     }
 
     public function add(ActionableInterface $actionable, ?Throwable $throwable = null): void

@@ -29,4 +29,9 @@ final class DummyAction implements ActionableInterface
     {
         return $this->transition;
     }
+
+    public function getException(): ?Throwable
+    {
+        return null;
+    }
 }
