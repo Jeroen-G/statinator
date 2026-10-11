@@ -6,6 +6,9 @@ services:
   SlevomatCodingStandard\Sniffs\ControlStructures\AssignmentInConditionSniff: ~
   PhpCsFixer\Fixer\Alias\MbStrFunctionsFixer: ~
   PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer: ~
+  PhpCsFixer\Fixer\ClassNotation\PropertyTypeDeclarationFixer: ~
+  PhpCsFixer\Fixer\FunctionNotation\NativeTypeDeclarationFixer: ~
+  PhpCsFixer\Fixer\ClassNotation\PromotedConstructorPropertyFixer: ~
 
 parameters:
   sets:
