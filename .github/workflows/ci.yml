@@ -9,13 +9,13 @@ jobs:
 
     strategy:
       matrix:
-        php: [7.4, 8.0]
+        php: [8.1, 8.2, 8.3, 8.4, 8.5]
 
     name: PHP${{ matrix.php }}
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -23,19 +23,20 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: json
           coverage: xdebug
+          tools: composer:v2
 
       - name: Install dependencies
         run: composer update --prefer-dist --no-suggest --no-interaction --no-scripts
 
       - name: Check codestyle
-        run: vendor/bin/ecs check --config=dev/easy-coding-standard.yml --no-progress-bar .
+        run: vendor/bin/ecs check --config=easy-coding-standard.php --no-progress-bar .
 
       - name: Execute unit tests
         run: vendor/bin/phpunit --testdox --colors=always --coverage-text=report/coverage.txt
 
       - name: Archive code coverage results
         if: ${{ github.event_name != 'pull_request' }}
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: code-coverage-report
           path: report/coverage.txt

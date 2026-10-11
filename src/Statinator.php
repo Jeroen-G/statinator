@@ -10,6 +10,7 @@ use JeroenG\Statinator\Repository\ArrayActionRepository;
 final class Statinator
 {
     private array $config;
+
     private ActionRepositoryInterface $actionRepository;
 
     public function __construct(array $config = [], ?ActionRepositoryInterface $repository = null)

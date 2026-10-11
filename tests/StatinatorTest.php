@@ -90,6 +90,7 @@ class StatinatorTest extends TestCase
 
         $this->assertTrue($dummy->triggered);
     }
+
     private function getConfig(): array
     {
         return [

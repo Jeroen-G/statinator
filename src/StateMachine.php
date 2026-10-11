@@ -11,15 +11,11 @@ use Throwable;
 
 final class StateMachine implements StateMachineInterface
 {
-    private array $config;
-    private StatableInterface $subject;
-    private ActionRepositoryInterface $repository;
-
-    public function __construct(StatableInterface $object, array $config, ActionRepositoryInterface $repository)
-    {
-        $this->subject = $object;
-        $this->config = $config;
-        $this->repository = $repository;
+    public function __construct(
+        private StatableInterface $subject,
+        private array $config,
+        private ActionRepositoryInterface $repository
+    ) {
     }
 
     public function can(string $transition): bool
@@ -79,11 +75,6 @@ final class StateMachine implements StateMachineInterface
         }
     }
 
-    /**
-     * @param ActionableInterface|callable $action
-     * @param string $transition
-     * @throws TransitionActionFailedException
-     */
     private function executeAction($action, string $transition): void
     {
         try {
@@ -93,7 +84,7 @@ final class StateMachine implements StateMachineInterface
                 return;
             }
 
-            if (class_exists($action)) {
+            if (is_string($action) && class_exists($action)) {
                 $action = new $action();
             }
 

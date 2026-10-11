@@ -11,6 +11,7 @@ use Throwable;
 final class LogActionRepository implements ActionRepositoryInterface
 {
     private array $ledger = [];
+
     private LoggerInterface $logger;
 
     public function __construct(LoggerInterface $logger)
