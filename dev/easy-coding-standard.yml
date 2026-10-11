@@ -1,14 +1,14 @@
 services:
-  PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: ~
-  PhpCsFixer\Fixer\Strict\StrictComparisonFixer: ~
-  PhpCsFixer\Fixer\Strict\StrictParamFixer: ~
-  PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer: ~
-  SlevomatCodingStandard\Sniffs\ControlStructures\AssignmentInConditionSniff: ~
-  PhpCsFixer\Fixer\Alias\MbStrFunctionsFixer: ~
-  PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer: ~
-  PhpCsFixer\Fixer\ClassNotation\PropertyTypeDeclarationFixer: ~
-  PhpCsFixer\Fixer\FunctionNotation\NativeTypeDeclarationFixer: ~
-  PhpCsFixer\Fixer\ClassNotation\PromotedConstructorPropertyFixer: ~
+  PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: null
+  PhpCsFixer\Fixer\Strict\StrictComparisonFixer: null
+  PhpCsFixer\Fixer\Strict\StrictParamFixer: null
+  PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer: null
+  SlevomatCodingStandard\Sniffs\ControlStructures\AssignmentInConditionSniff: null
+  PhpCsFixer\Fixer\Alias\MbStrFunctionsFixer: null
+  PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer: null
+  PhpCsFixer\Fixer\ClassNotation\PropertyTypeDeclarationFixer: null
+  PhpCsFixer\Fixer\FunctionNotation\NativeTypeDeclarationFixer: null
+  PhpCsFixer\Fixer\ClassNotation\PromotedConstructorPropertyFixer: null
 
 parameters:
   sets:
