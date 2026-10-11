@@ -75,7 +75,7 @@ final class StateMachine implements StateMachineInterface
         }
     }
 
-    private function executeAction(ActionableInterface|callable|string $action, string $transition): void
+    private function executeAction($action, string $transition): void
     {
         try {
             if (is_callable($action)) {
