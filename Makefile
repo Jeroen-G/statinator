@@ -63,10 +63,10 @@ do-lint-staged-files:
 	@node_modules/.bin/lint-staged
 
 do-cs-ecs:
-	./vendor/bin/ecs check --config=dev/easy-coding-standard.yml
+	./vendor/bin/ecs check --config=easy-coding-standard.php .
 
 do-cs-ecs-fix:
-	./vendor/bin/ecs check --fix --config=dev/easy-coding-standard.yml
+	./vendor/bin/ecs check --fix --config=easy-coding-standard.php .
 
 # Project
 do-assets-install:
@@ -83,5 +83,5 @@ do-test-infection:
 	vendor/bin/infection --threads=4 --min-covered-msi=100
 
 do-test-report:
-	@echo "\n=== Click the link below to see the test coverage report ===\n"
+	@echo "=== Click the link below to see the test coverage report ===\n"
 	@echo "report/index.html"
