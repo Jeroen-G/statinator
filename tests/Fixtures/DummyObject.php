@@ -10,6 +10,7 @@ use RuntimeException;
 final class DummyObject implements StatableInterface
 {
     public bool $triggered = false;
+
     private string $currentState;
 
     public function __construct(string $initialState)

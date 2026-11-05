@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.2/phpunit.xsd"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
          bootstrap="vendor/autoload.php"
          beStrictAboutOutputDuringTests="true"
-         beStrictAboutTodoAnnotatedTests="true"
          backupGlobals="false"
-         colors="true"
-         verbose="true">
+         colors="true">
 
     <testsuites>
         <testsuite name="unit">
@@ -14,13 +12,16 @@
         </testsuite>
     </testsuites>
 
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
+    <source>
+        <include>
             <directory suffix=".php">src</directory>
-        </whitelist>
-    </filter>
+        </include>
+    </source>
 
-    <logging>
-        <log type="coverage-html" target="./report" lowUpperBound="50" highLowerBound="80" />
-    </logging>
+    <coverage>
+        <report>
+            <html outputDirectory="report" lowUpperBound="50" highLowerBound="80"/>
+            <clover outputFile="logs/clover.xml"/>
+        </report>
+    </coverage>
 </phpunit>

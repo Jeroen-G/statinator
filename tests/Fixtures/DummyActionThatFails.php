@@ -11,6 +11,7 @@ use RuntimeException;
 final class DummyActionThatFails implements ActionableInterface
 {
     private StateMachineInterface $stateMachine;
+
     private string $transition;
 
     public function getState(): string

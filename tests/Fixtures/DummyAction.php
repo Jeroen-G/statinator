@@ -10,6 +10,7 @@ use JeroenG\Statinator\StateMachineInterface;
 final class DummyAction implements ActionableInterface
 {
     private StateMachineInterface $stateMachine;
+
     private string $transition;
 
     public function getState(): string
