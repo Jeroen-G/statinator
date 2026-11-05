@@ -27,7 +27,6 @@
         "@return_value": true,
         "@sort": true,
         "@unwrap": true,
-        "@zero_iteration": true,
         "@extensions": true,
         "@default": true
     }
